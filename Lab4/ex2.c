@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
         local++;
         printf("child pid = %d parent pid = %d\n", (int)getpid(), (int)getppid());
         printf("child's local = %d, child's global = %d\n", local, global);
-        execl("bin/ls", "ls", argv[1], NULL);
+        execl("/bin/ls", "ls", argv[1], NULL);
     }
     else
     {

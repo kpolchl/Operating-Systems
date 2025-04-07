@@ -27,21 +27,17 @@ int charcount(FILE *const fin)
 void rev(char *s)
 {
 
-    // Initialize l and r pointers
     int l = 0;
     int r = strlen(s) - 1;
     char t;
 
-    // Swap characters till l and r meet
     while (l < r)
     {
 
-        // Swap characters
         t = s[l];
         s[l] = s[r];
         s[r] = t;
 
-        // Move pointers towards each other
         l++;
         r--;
     }
@@ -52,13 +48,13 @@ int main(void)
     char src_dir[80];
     char dest_dir[80];
 
-    struct dirent *de; // Pointer for directory entry
+    struct dirent *de;
     printf("Enter a path to source directory");
 
     scanf("%s", src_dir);
     DIR *source_dirp = opendir(src_dir);
 
-    if (source_dirp == NULL) // opendir returns NULL if couldn't open directory
+    if (source_dirp == NULL)
     {
         printf("Could not open given directory");
         return 1;
@@ -66,7 +62,7 @@ int main(void)
     printf("Enter a path to output directory");
     scanf("%s", dest_dir);
     DIR *destination_dirp = opendir(dest_dir);
-    if (destination_dirp == NULL) // opendir returns NULL if couldn't open directory
+    if (destination_dirp == NULL)
     {
         printf("Could not open out directory");
         return 1;
