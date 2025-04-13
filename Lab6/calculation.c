@@ -38,4 +38,5 @@ int main()
     write(fd_result, &result, sizeof(result));
     close(fd_result);
     return 0;
+    
 }
