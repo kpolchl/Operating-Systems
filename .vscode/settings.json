@@ -1,9 +1,11 @@
 {
   "files.associations": {
+    "*.dbclient-js": "javascript",
     "*.sqlbook": "sql",
     "*.ndjson": "jsonl",
-    "*.dbclient-js": "javascript",
     "unistd.h": "c",
-    "types.h": "c"
+    "types.h": "c",
+    "stdio.h": "c",
+    "random": "c"
   }
 }
